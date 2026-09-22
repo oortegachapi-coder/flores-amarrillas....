@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta
+        name="description"
+        content="Un pequeño jardín hecho especialmente para CINDIA."
+    >
+
+    <meta name="theme-color" content="#ffd83d">
+
+    <title>Para CINDIA 💛 | 21 de septiembre</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================================
+         AUDIO
+         Una única instancia de audio para toda la experiencia.
+         ========================================================= -->
+
+    <audio
+        id="backgroundMusic"
+        src="flores-amarillas.mp3"
+        loop
+        preload="auto"
+    ></audio>
+
+
+    <!-- =========================================================
+         CONTENEDOR GENERAL
+         ========================================================= -->
+
+    <main id="app" aria-label="Regalo de flores amarillas para CINDIA">
+
+
+        <!-- =====================================================
+             DECORACIONES GLOBALES
+             ===================================================== -->
+
+        <div id="globalParticles" aria-hidden="true"></div>
+
+        <div class="global-glow glow-one" aria-hidden="true"></div>
+        <div class="global-glow glow-two" aria-hidden="true"></div>
+
+
+        <!-- =====================================================
+             BOTÓN DE MÚSICA
+             ===================================================== -->
+
+        <button
+            id="musicButton"
+            class="music-button"
+            type="button"
+            aria-label="Pausar música"
+            title="Música"
+        >
+            ♪
+        </button>
+
+
+        <!-- =====================================================
+             ESCENA 1
+             PORTADA
+             ===================================================== -->
+
+        <section
+            id="scene1"
+            class="scene scene-cover active"
+            aria-labelledby="titleScene1"
+        >
+
+            <div class="sky-gradient"></div>
+
+            <div class="sun-cover" aria-hidden="true"></div>
+
+            <div class="cover-cloud cloud-cover-one" aria-hidden="true"></div>
+            <div class="cover-cloud cloud-cover-two" aria-hidden="true"></div>
+            <div class="cover-cloud cloud-cover-three" aria-hidden="true"></div>
+
+            <div class="cover-stars" aria-hidden="true">
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>·</span>
+                <span>✧</span>
+                <span>✦</span>
+            </div>
+
+            <div
+                id="coverPetals"
+                class="petal-container"
+                aria-hidden="true"
+            ></div>
+
+
+            <!-- Jardín -->
+
+            <div class="garden-cover" aria-hidden="true">
+
+                <div class="grass-layer grass-back"></div>
+
+                <div class="flower-row flower-row-one"></div>
+                <div class="flower-row flower-row-two"></div>
+                <div class="flower-row flower-row-three"></div>
+
+                <div class="grass-layer grass-front"></div>
+
+            </div>
+
+
+            <div class="scene-content cover-content">
+
+                <div class="mini-badge">
+                    <span>21</span>
+                    <small>SEP</small>
+                </div>
+
+                <p class="eyebrow">
+                    Un pequeño detalle para ti
+                </p>
+
+                <h1 id="titleScene1">
+                    Para <span>CINDIA</span> 💛
+                </h1>
+
+                <p class="subtitle">
+                    Un pequeño jardín hecho especialmente para ti.
+                </p>
+
+                <div class="heart-divider">
+                    <span></span>
+                    <b>♥</b>
+                    <span></span>
+                </div>
+
+                <button
+                    id="startButton"
+                    class="main-button"
+                    type="button"
+                    aria-label="Comenzar la experiencia"
+                >
+                    <span>Comenzar</span>
+                    <strong>🌻</strong>
+                </button>
+
+                <p class="tap-hint">
+                    Toca para entrar a tu pequeño jardín
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESCENA 2
+             FLORES AMARILLAS
+             ===================================================== -->
+
+        <section
+            id="scene2"
+            class="scene scene-flowers"
+            aria-labelledby="titleScene2"
+        >
+
+            <div class="blue-sky"></div>
+
+            <div class="sun-scene2" aria-hidden="true">
+                <div class="sun-rays"></div>
+                <div class="sun-core"></div>
+            </div>
+
+            <div class="cloud cloud-one" aria-hidden="true"></div>
+            <div class="cloud cloud-two" aria-hidden="true"></div>
+            <div class="cloud cloud-three" aria-hidden="true"></div>
+
+
+            <div
+                id="flowersParticles"
+                class="particle-field"
+                aria-hidden="true"
+            ></div>
+
+
+            <!-- Campo -->
+
+            <div class="field" aria-hidden="true">
+
+                <div class="field-hill hill-back"></div>
+                <div class="field-hill hill-middle"></div>
+                <div class="field-hill hill-front"></div>
+
+                <div class="flower-decoration flower-a"></div>
+                <div class="flower-decoration flower-b"></div>
+                <div class="flower-decoration flower-c"></div>
+                <div class="flower-decoration flower-d"></div>
+                <div class="flower-decoration flower-e"></div>
+                <div class="flower-decoration flower-f"></div>
+                <div class="flower-decoration flower-g"></div>
+                <div class="flower-decoration flower-h"></div>
+
+            </div>
+
+
+            <!-- Perrito 1 -->
+
+            <div
+                class="dog dog-snoopy"
+                aria-label="Perrito blanco de caricatura"
+            >
+
+                <div class="dog-tail"></div>
+
+                <div class="dog-body">
+
+                    <div class="dog-leg dog-leg-back"></div>
+                    <div class="dog-leg dog-leg-front"></div>
+
+                </div>
+
+                <div class="dog-head">
+
+                    <div class="dog-ear"></div>
+
+                    <div class="dog-eye dog-eye-left"></div>
+                    <div class="dog-eye dog-eye-right"></div>
+
+                    <div class="dog-nose"></div>
+
+                    <div class="dog-mouth"></div>
+
+                    <div class="dog-cheek"></div>
+
+                </div>
+
+                <div class="dog-arm dog-arm-left"></div>
+                <div class="dog-arm dog-arm-right"></div>
+
+                <div class="dog-bouquet">
+
+                    <div class="bouquet-flower f1"></div>
+                    <div class="bouquet-flower f2"></div>
+                    <div class="bouquet-flower f3"></div>
+                    <div class="bouquet-flower f4"></div>
+                    <div class="bouquet-flower f5"></div>
+
+                    <div class="bouquet-stem"></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="scene-content scene2-content">
+
+                <p class="eyebrow light-eyebrow">
+                    Una sorpresa llegó al jardín
+                </p>
+
+                <h2 id="titleScene2">
+                    Tus flores amarillas
+                    <span>ya llegaron 🌻</span>
+                </h2>
+
+                <p class="scene-text">
+                    Hechas con cariño, para iluminar tu día.
+                </p>
+
+                <div class="small-heart-row" aria-hidden="true">
+                    <span>♥</span>
+                    <span>✦</span>
+                    <span>♥</span>
+                </div>
+
+                <button
+                    class="secondary-button next-button"
+                    type="button"
+                    data-next="scene3"
+                    aria-label="Continuar a la siguiente escena"
+                >
+                    Continuar
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESCENA 3
+             DISTANCIA
+             ===================================================== -->
+
+        <section
+            id="scene3"
+            class="scene scene-distance"
+            aria-labelledby="titleScene3"
+        >
+
+            <div class="night-sky"></div>
+
+            <div class="moon" aria-hidden="true">
+                <div class="moon-shadow"></div>
+            </div>
+
+            <div class="stars-layer" aria-hidden="true">
+
+                <span class="star star1">✦</span>
+                <span class="star star2">✧</span>
+                <span class="star star3">✦</span>
+                <span class="star star4">·</span>
+                <span class="star star5">✧</span>
+                <span class="star star6">✦</span>
+                <span class="star star7">·</span>
+                <span class="star star8">✧</span>
+                <span class="star star9">✦</span>
+                <span class="star star10">·</span>
+                <span class="star star11">✧</span>
+                <span class="star star12">✦</span>
+
+            </div>
+
+
+            <div class="night-cloud night-cloud-one"></div>
+            <div class="night-cloud night-cloud-two"></div>
+
+
+            <div
+                id="distanceHearts"
+                class="distance-hearts"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="scene-content distance-content">
+
+                <div class="distance-icon">
+                    <span>✦</span>
+                    <b>♥</b>
+                    <span>✦</span>
+                </div>
+
+                <p class="eyebrow night-eyebrow">
+                    Incluso cuando estamos lejos...
+                </p>
+
+                <h2 id="titleScene3">
+                    La distancia no impide
+                    <span>los detalles bonitos.</span>
+                </h2>
+
+                <p class="scene-text night-text">
+                    Hay personas que se sienten cerquita
+                    incluso desde lejos.
+                </p>
+
+                <button
+                    class="secondary-button night-button next-button"
+                    type="button"
+                    data-next="scene4"
+                    aria-label="Continuar al mensaje especial"
+                >
+                    Tengo algo más
+                    <span>♥</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESCENA 4
+             MENSAJE ESPECIAL
+             ===================================================== -->
+
+        <section
+            id="scene4"
+            class="scene scene-message"
+            aria-labelledby="titleScene4"
+        >
+
+            <div class="gold-background"></div>
+
+            <div class="radiant-light light-center"></div>
+
+            <div
+                class="sunbeam beam-one"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="sunbeam beam-two"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="sunbeam beam-three"
+                aria-hidden="true"
+            ></div>
+
+            <div class="message-flower flower-message-one"></div>
+            <div class="message-flower flower-message-two"></div>
+            <div class="message-flower flower-message-three"></div>
+            <div class="message-flower flower-message-four"></div>
+            <div class="message-flower flower-message-five"></div>
+            <div class="message-flower flower-message-six"></div>
+
+
+            <div class="scene-content message-content">
+
+                <div class="message-sparkle" aria-hidden="true">
+                    ✦
+                </div>
+
+                <p class="eyebrow gold-eyebrow">
+                    Y quería decirte algo...
+                </p>
+
+                <h2 id="titleScene4">
+                    Eres lo mejor que
+                    <span>me ha pasado.</span>
+                </h2>
+
+                <div class="message-line"></div>
+
+                <p class="scene-text message-text">
+                    Gracias por existir y por hacer todo
+                    un poquito más bonito.
+                </p>
+
+                <div class="message-heart" aria-hidden="true">
+                    ♥
+                </div>
+
+                <button
+                    class="secondary-button red-button next-button"
+                    type="button"
+                    data-next="scene5"
+                    aria-label="Abrir la carta"
+                >
+                    Abre tu carta
+                    <span>💌</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESCENA 5
+             CARTA
+             ===================================================== -->
+
+        <section
+            id="scene5"
+            class="scene scene-letter"
+            aria-labelledby="titleScene5"
+        >
+
+            <div class="letter-background"></div>
+
+            <div class="letter-glow"></div>
+
+            <div class="letter-petal-layer" aria-hidden="true">
+                <span>🌹</span>
+                <span>♥</span>
+                <span>✦</span>
+                <span>🌸</span>
+                <span>♥</span>
+            </div>
+
+
+            <div class="scene-content letter-content">
+
+                <p class="eyebrow red-eyebrow">
+                    Algo escrito especialmente para ti
+                </p>
+
+                <h2 id="titleScene5">
+                    Una carta para ti
+                </h2>
+
+                <p class="letter-guide">
+                    Toca el sobre
+                </p>
+
+
+                <!-- Sobre -->
+
+                <div
+                    id="envelope"
+                    class="envelope-wrapper"
+                    role="button"
+                    tabindex="0"
+                    aria-label="Abrir carta"
+                >
+
+                    <div class="envelope-shadow"></div>
+
+                    <div class="envelope">
+
+                        <div class="envelope-back"></div>
+
+                        <div class="envelope-letter-preview">
+                            <span>Para Cindia</span>
+                        </div>
+
+                        <div class="envelope-flap"></div>
+
+                        <div class="envelope-front"></div>
+
+                        <div class="envelope-seal">
+                            ♥
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Carta -->
+
+                <div
+                    id="letter"
+                    class="letter-paper"
+                    aria-hidden="true"
+                >
+
+                    <div class="paper-decoration paper-decoration-top">
+                        ✦
+                    </div>
+
+                    <div class="paper-decoration paper-decoration-bottom">
+                        ✦
+                    </div>
+
+                    <div class="paper-content">
+
+                        <div class="paper-header">
+                            <span>De: Oliver</span>
+                            <span>Para: Cindia</span>
+                        </div>
+
+                        <div class="paper-divider"></div>
+
+                        <p>
+                            Aunque la distancia exista no es impedimento
+                            para regalarte tus flores amarillas, no podrán
+                            ser reales pero las hice con mucho cariño
+                            pensando en ti, espero que te hayan gustado,
+                            y aprovechando la ocasión quería decirte que
+                            eres lo mejor que me ha pasado. Gracias por existir.
+                        </p>
+
+                        <p class="paper-signature">
+                            Con cariño, Oliver 💛
+                        </p>
+
+                        <button
+                            id="closeLetterButton"
+                            class="close-letter-button"
+                            type="button"
+                            aria-label="Cerrar carta"
+                        >
+                            Cerrar carta
+                        </button>
+
+                        <button
+                            id="finishLetterButton"
+                            class="finish-letter-button"
+                            type="button"
+                            aria-label="Continuar a la escena final"
+                        >
+                            Continuar
+                            <span>🌻</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ESCENA 6
+             FINAL
+             ===================================================== -->
+
+        <section
+            id="scene6"
+            class="scene scene-final"
+            aria-labelledby="titleScene6"
+        >
+
+            <div class="final-sky"></div>
+
+            <div class="final-sun"></div>
+
+            <div
+                id="finalParticles"
+                class="final-particles"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="final-flower-field" aria-hidden="true">
+
+                <div class="final-flower ff1"></div>
+                <div class="final-flower ff2"></div>
+                <div class="final-flower ff3"></div>
+                <div class="final-flower ff4"></div>
+                <div class="final-flower ff5"></div>
+                <div class="final-flower ff6"></div>
+                <div class="final-flower ff7"></div>
+                <div class="final-flower ff8"></div>
+                <div class="final-flower ff9"></div>
+                <div class="final-flower ff10"></div>
+
+            </div>
+
+
+            <div class="scene-content final-content">
+
+                <div class="final-date">
+                    21 · 09
+                </div>
+
+
+                <!-- Perrito 2 -->
+
+                <div class="dogs-together">
+
+                    <div class="final-dog final-dog-left">
+
+                        <div class="final-dog-body"></div>
+
+                        <div class="final-dog-head">
+                            <div class="final-dog-ear"></div>
+                            <div class="final-dog-eye"></div>
+                            <div class="final-dog-nose"></div>
+                        </div>
+
+                        <div class="final-dog-leg leg-one"></div>
+                        <div class="final-dog-leg leg-two"></div>
+
+                    </div>
+
+
+                    <div class="final-heart">
+                        ♥
+                    </div>
+
+
+                    <div class="final-dog final-dog-right">
+
+                        <div class="final-dog-body"></div>
+
+                        <div class="final-dog-head">
+                            <div class="final-dog-ear"></div>
+                            <div class="final-dog-eye"></div>
+                            <div class="final-dog-nose"></div>
+                        </div>
+
+                        <div class="final-dog-leg leg-one"></div>
+                        <div class="final-dog-leg leg-two"></div>
+
+                    </div>
+
+                </div>
+
+
+                <p class="final-eyebrow">
+                    Un jardín, una carta y un pequeño detalle...
+                </p>
+
+                <h2 id="titleScene6">
+                    Feliz día de las
+                    <span>flores amarillas, CINDIA 🌻</span>
+                </h2>
+
+                <p class="final-text">
+                    Con mucho cariño.
+                </p>
+
+                <div class="final-divider">
+                    <span></span>
+                    <b>💛</b>
+                    <span></span>
+                </div>
+
+                <button
+                    id="restartButton"
+                    class="main-button final-button"
+                    type="button"
+                    aria-label="Volver a ver la experiencia"
+                >
+                    Volver a verlo
+                    <span>↻</span>
+                </button>
+
+            </div>
+
+
+            <div class="final-ground"></div>
+
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
